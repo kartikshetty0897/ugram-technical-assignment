@@ -1,0 +1,376 @@
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=80d33c19-929f-4d11-a8f6-3dae838c9efa");
+@font-face {
+  font-family: "Industry W05 Bold";
+  src: url("fonts/9af0d4f1-307f-4a22-b5a2-c55bf0d9ec8b.woff2") format("woff2"),
+    url("fonts/8a08b405-1b57-425c-9bc2-f90381b404b9.woff") format("woff");
+}
+@font-face {
+  font-family: "Normative W01 Regular";
+  src: url("fonts/8dcd4d2c-97e7-4b6a-acd3-8e95ebe05d5c.woff2") format("woff2"),
+    url("fonts/956fe778-246a-47d9-b148-4e983556fb3c.woff") format("woff");
+}
+@font-face {
+  font-family: "Normative W01 Medium";
+  src: url("fonts/5ec7316a-9a46-4ed9-953e-703238ff1087.woff2") format("woff2"),
+    url("fonts/0c63116f-e23f-4b0a-8fd2-054456c9deb3.woff") format("woff");
+}
+@font-face {
+  font-family: "Normative W01 Bold";
+  src: url("fonts/e923893f-121b-4553-b569-7c74b45de7aa.woff2") format("woff2"),
+    url("fonts/eeb988df-8a91-4ad2-bc81-43dfc56749ea.woff") format("woff");
+}
+
+:root {
+  --color-white: #eee;
+  --color-black: #000;
+  --color-sunglow: #fec23e;
+
+  --color-primary: #6fccde; /* Viking */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%; /* 1rem = 10px, 10px/16px = 62.5% */
+  height: 100%;
+}
+
+@media only screen and (max-width: 1600px) {
+  html {
+    font-size: 1vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 2.5vw;
+  }
+}
+
+body {
+  font-family: "Normative W01 Medium";
+  line-height: 1.6;
+  font-size: 1.6rem;
+
+  min-height: 100%;
+  background-color: var(--color-black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: auto;
+}
+
+.main {
+  background-image: url("images/BGLayer.png");
+  min-height: 65rem;
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 3rem 0 5rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    background-image: url("images/mobileBGLayer.jpg");
+  }
+}
+
+.main__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  .main__content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main__logos {
+  padding-left: 12rem;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .main__logos {
+    padding-left: 0;
+    padding-bottom: 4rem;
+  }
+}
+
+.main__logo-box--brands {
+  width: 25rem;
+  margin: auto;
+}
+
+.main__logo-box--game-contest {
+  width: 26rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.main__logo-box--prize-banner {
+  width: 48rem;
+  margin-left: auto;
+  padding-bottom: 3rem;
+}
+
+.main__logo-box--prize-banner--mobile {
+  display: none;
+
+  max-width: 38rem;
+  margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .main__logo-box--prize-banner--desktop {
+    display: none;
+  }
+
+  .main__logo-box--prize-banner--mobile {
+    display: block;
+  }
+}
+
+.main__form {
+  width: 51rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .main__form {
+    width: 100%;
+  }
+}
+
+.main__register-form-container::before,
+.main__register-form-container::after {
+  background-size: 100% 100%;
+  height: 3.6rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.main__register-form-container::before {
+  content: "";
+  background-image: url("images/backgroundtop.png");
+  top: -3.6rem;
+  left: 0;
+}
+
+.main__register-form-container::after {
+  content: "";
+  background-image: url("images/backgroundbottom.png");
+  bottom: -3.6rem;
+  left: 0;
+}
+
+.main__register-form-container {
+  background-image: url("images/backgroundcenter.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  font-family: "Industry W05 Bold";
+  color: var(--color-white);
+  padding: 0 3.6rem;
+  margin: 3.6rem 0;
+  width: 37rem;
+
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .main__register-form-container {
+    margin: 3.6rem auto;
+  }
+}
+
+.main__register-form__header {
+  color: var(--color-primary);
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.main__register-form__sub {
+  font-family: "Normative W01 Regular";
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.main__register-form__input {
+  outline: none;
+  padding: 0.5rem;
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.main__register-form__input::placeholder {
+  color: var(--color-black);
+}
+
+.main__register-form__submit {
+  font-family: "Industry W05 Bold";
+  background-color: #fec23e;
+  font-size: 1.2rem;
+  padding: 0.5rem 3.25rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  outline: none;
+  border: none;
+}
+
+.main__snacks {
+  max-width: 39rem;
+  padding-top: 2rem;
+  transform: translateX(-2rem);
+  position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .main__snacks {
+    margin: 3.6rem auto 0.6rem auto;
+    transform: translateX(0rem);
+  }
+
+  .main__snacks img {
+    width: 98%;
+  }
+}
+
+.main__snack-messages {
+  position: absolute;
+  top: 6rem;
+  right: 3rem;
+  width: 18rem;
+}
+
+.main__snack-messages__header {
+  color: var(--color-primary);
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.main__snack-messages__sub {
+  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  word-spacing: 0.2rem;
+}
+
+.main__snack-product-link:link,
+.main__snack-product-link:visited,
+.main__snack-product-link:hover,
+.main__snack-product-link:active {
+  color: var(--color-primary);
+}
+
+.footer {
+  border-top: 0.75rem solid var(--color-primary);
+  background: var(--color-black);
+  position: relative;
+  padding: 5rem 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding: 7rem 3rem;
+  }
+}
+
+.footer__images {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  width: 45rem;
+  left: 13rem;
+  top: -12rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer__images {
+    left: 8rem;
+    width: auto;
+  }
+}
+
+.footer__xbox {
+  max-width: 13rem;
+}
+
+.footer__game {
+  max-width: 15rem;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  flex-wrap: wrap;
+
+  font-family: "Industry W05 Bold";
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.footer__links li {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footer__links > li:not(:last-child)::after {
+  content: "|";
+  color: inherit;
+  display: inline-block;
+  margin: 0 0.5rem;
+  height: 100%;
+}
+
+.footer__link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__link--external {
+  color: var(--color-white);
+}
+
+.footer__closing-message {
+  text-align: center;
+  color: rgba(255, 255, 225, 0.6);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.footer__expiry-date {
+  margin: 1rem 0;
+}
+
+.footer__logo-box {
+  margin: 7rem auto;
+  width: 15rem;
+}
